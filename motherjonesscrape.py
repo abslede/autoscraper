@@ -19,7 +19,7 @@ for story in stories:
     row['title'] = story.select_one('.hed').text.strip()
     row['byline'] = story.select_one('.byline').text.strip()
     try:
-        row['URL'] = story.find('a')['href']
+        row['url'] = story.find('a')['href']
     except:
         print("Couldn't find a link.")
     print(row)
